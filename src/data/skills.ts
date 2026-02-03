@@ -1,15 +1,19 @@
 export const skillGroups = [
     {
-        category: "Languages",
-        skills: ["TypeScript", "JavaScript", "Python", "C++", "HTML/CSS"]
+        category: "Programming Languages",
+        skills: ["Python", "R", "SQL"]
     },
     {
-        category: "Frameworks & Libraries",
-        skills: ["React", "Next.js", "Node.js", "Express", "Sass"]
+        category: "Machine Learning & AI",
+        skills: ["Scikit-learn", "TensorFlow", "XGBoost", "Langchain", "CrewAI", "Optuna"]
     },
     {
-        category: "Tools & Databases",
-        skills: ["Git", "Docker", "PostgreSQL", "MongoDB", "Redis"]
+        category: "Data & Analytics",
+        skills: ["Numpy", "Polars", "Matplotlib", "Seaborn", "Hypothesis testing", "Statistical Analysis"]
+    },
+    {
+        category: "Tools Et al.",
+        skills: ["Git", "Docker", "PostgreSQL", "MlFlow", "Unsloth", "Hugging Face Transformers", "Procreate"]
     }
 ];
 

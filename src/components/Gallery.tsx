@@ -20,7 +20,7 @@ export default function Gallery() {
                                 onClick={() => setSelectedItem(painting)}
                             >
                                 <div className={styles.imageWrapper}>
-                                    <div className={styles.placeholder}>[ {painting.title} ]</div>
+                                    <img src={painting.imageUrl} alt={painting.title} className={styles.paintingImage} />
                                 </div>
                                 <div className={styles.info}>
                                     <h3 className={styles.paintingTitle}>{painting.title}</h3>
@@ -37,7 +37,7 @@ export default function Gallery() {
                     <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
                         <button className={styles.closeBtn} onClick={() => setSelectedItem(null)}>close [x]</button>
                         <div className={styles.lightboxImageWrapper}>
-                            <div className={styles.placeholderLarge}>{selectedItem.title}</div>
+                            <img src={selectedItem.imageUrl} alt={selectedItem.title} className={styles.lightboxImage} />
                         </div>
                         <div className={styles.lightboxDetails}>
                             <h2 className="text-accent">{selectedItem.title}</h2>

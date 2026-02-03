@@ -1,23 +1,30 @@
 export const projects = [
     {
         id: 1,
-        title: "E-Commerce Dashboard",
-        description: "A high-performance dashboard built with Next.js and Chart.js to track sales metrics.",
-        tech: ["Next.js", "TypeScript", "Chart.js"],
-        link: "https://github.com/username/project-1"
+        title: "Capstone Project Management Platform - In Progress",
+        description: "An end-to-end web platform built on top of Django and React for managing capstone projects.",
+        tech: ["Django", "React", "PostgreSQL"],
+        link: "https://github.com/sumit-sk-yadav/Capstone_Management_Platform"
     },
     {
         id: 2,
-        title: "AI Chat Application",
-        description: "Real-time chat app utilizing OpenAI API and WebSockets for seamless communication.",
-        tech: ["React", "Node.js", "OpenAI"],
-        link: "https://github.com/username/project-2"
+        title: "Article Generator",
+        description: "A medium-style article generator based on user inputs and latest research.",
+        tech: ["Cerebras API", "CrewAI"],
+        link: "https://github.com/sumit-sk-yadav/Article-Generator2"
     },
     {
         id: 3,
-        title: "Personal Portfolio",
-        description: "This very website! Built with static export in mind for GitHub Pages.",
-        tech: ["Next.js", "Vanilla CSS"],
+        title: "Quivr",
+        description: "A self-hosted AI powered RAG CLI tool to converse with documents",
+        tech: ["Hugging Face Transformers", "Ollama", "LangChain"],
+        link: "https://github.com/username/portfolio"
+    },
+    {
+        id: 4,
+        title: "Insurely",
+        description: "An Machine Learning powered insurance premium estimator hosted on streamlit.",
+        tech: ["Scikit-learn", "Streamlit", "Optuna", "XGBoost", "SHAP"],
         link: "https://github.com/username/portfolio"
     }
 ];

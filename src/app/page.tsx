@@ -6,25 +6,26 @@ export default function Home() {
     <div className="container animate-fade">
       <section className={styles.hero}>
         <div className={styles.profilePicContainer}>
-          <img src="/profile.png" alt="Sumit Yadav" className={styles.profilePic} />
+          <img src="/main_picture.png" alt="Sumit Yadav" className={styles.profilePic} />
         </div>
         <h1 className={styles.title}>
-          Sumit SurenderKumar Yadav
+          Sumit Yadav
         </h1>
         <div className={styles.bio}>
           <p>
-            I am a <span className="text-accent">Full Stack Developer</span>,
-            writer, and artist based in India.
+            I am a self-taught <span className="text-accent">Data Scientist</span>,
+            a <span className="text-accent">Marine Ecologist</span> by academic training,
+            and an <span className="text-accent">Artist</span> when inspiration strikes.
           </p>
-          <p>
+          {/* <p>
             I build digital experiences that focus on <span className="text-accent">functionality</span>
             and <span className="text-accent">technical excellence</span>.
-          </p>
+          </p> */}
         </div>
       </section>
 
       <section className={`section ${styles.skillsSection}`}>
-        <h2 className={styles.sectionTitle}>Technical Expertise</h2>
+        <h2 className={styles.sectionTitle}>Technical Skills</h2>
         <div className={styles.skillsContainer}>
           {skillGroups.map((group, index) => (
             <div key={index} className={styles.skillRow}>
