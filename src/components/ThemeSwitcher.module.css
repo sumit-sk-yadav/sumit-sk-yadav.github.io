@@ -1,0 +1,75 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 52px;
+    /* Explicitly set width instead of right: 0 */
+    height: 28px;
+    /* Explicitly set height instead of bottom: 0 */
+    background-color: var(--border);
+    border-radius: 28px;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    top: 4px;
+    /* Keep this change */
+    background-color: var(--bg);
+    border-radius: 50%;
+    transition: var(--transition);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    will-change: transform;
+    /* Keep this */
+}
+
+.checkbox:checked+.slider {
+    background-color: var(--accent);
+}
+
+.checkbox:checked+.slider::before {
+    transform: translateX(24px);
+}
+
+.icon {
+    position: absolute;
+    font-size: 0.7rem;
+    transition: var(--transition);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    line-height: 1;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.checkbox:checked+.slider .icon {
+    transform: translateX(24px) translateY(-50%);
+}
+
+.switch:hover .slider {
+    opacity: 0.9;
+}

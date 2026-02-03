@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Light Mode - Inspired by jrosser.co.uk oklch values */
+  --bg: oklch(0.9848 0 0);
+  --text: oklch(0.2699 0.0096 235.05);
+  --accent: rgb(175, 103, 255);
+  /* Purple accent */
+  --accent-alt: rgb(95, 242, 107);
+  /* Green accent */
+  --muted: oklch(0.6 0 0);
+  --border: oklch(0.9 0 0);
+  --card-bg: transparent;
+
+  --font-mono: 'JetBrains Mono', monospace;
+  --max-width: 800px;
+  --transition: all 0.2s ease-in-out;
+}
+
+[data-theme='dark'] {
+  /* Dark Mode - Inspired by jrosser.co.uk oklch values */
+  --bg: oklch(0.2364 0.0045 248);
+  --text: oklch(0.8354 0 264);
+  --accent: rgb(95, 242, 107);
+  /* Green accent in dark mode */
+  --accent-alt: rgb(175, 103, 255);
+  /* Purple accent in dark mode */
+  --muted: oklch(0.6 0 0);
+  --border: oklch(0.35 0 0);
+  --card-bg: transparent;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-y: scroll;
+}
+
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration-thickness: 2px;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Minimalist Grid */
+.grid-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
