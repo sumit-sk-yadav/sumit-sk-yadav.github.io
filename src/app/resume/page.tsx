@@ -4,11 +4,11 @@ export default function ResumePage() {
     return (
         <div className="container animate-fade">
             <section className="section">
-                <h1 style={{ marginBottom: '4rem' }}>Experience & Education</h1>
+                <h1 style={{ marginBottom: '2.5rem' }}>Experience & Education</h1>
 
                 <div style={{ position: 'relative', borderLeft: '2px solid var(--border)', marginLeft: '0.5rem', paddingLeft: '2.5rem' }}>
                     {experience.map((exp, index) => (
-                        <div key={index} style={{ marginBottom: '4rem', position: 'relative' }}>
+                        <div key={index} style={{ marginBottom: '2.5rem', position: 'relative' }}>
                             <div style={{
                                 position: 'absolute',
                                 left: '-2.5rem',
@@ -24,16 +24,16 @@ export default function ResumePage() {
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                                 <span className="text-muted" style={{ fontWeight: 600 }}>{exp.period}</span>
                                 <h3 style={{ margin: 0, color: 'var(--text)' }}>{exp.role}</h3>
-                                <p style={{ fontWeight: 700, color: 'var(--accent-alt)', fontSize: '0.9rem' }}>{exp.company}</p>
-                                <p className="text-muted" style={{ marginTop: '0.5rem', maxWidth: '600px' }}>{exp.description}</p>
+                                <p style={{ fontWeight: 700, color: 'var(--accent-alt)', fontSize: '0.9rem', marginBottom: '0.25rem' }}>{exp.company}</p>
+                                <p className="text-muted" style={{ marginTop: '0', maxWidth: '600px' }}>{exp.description}</p>
                             </div>
                         </div>
                     ))}
                 </div>
 
-                <div style={{ marginTop: '4rem', padding: '2rem', border: '1px dashed var(--border)', textAlign: 'center' }}>
-                    <p style={{ marginBottom: '1.5rem' }}>Looking for a more detailed PDF version?</p>
-                    <a href="/resume.pdf" download className="text-accent" style={{ fontWeight: 700 }}>Download CV / Resume (PDF)</a>
+                <div style={{ marginTop: '2.5rem', padding: '2rem', border: '1px dashed var(--border)', textAlign: 'center' }}>
+                    <p style={{ marginBottom: '1.5rem' }}>Download (.docx)</p>
+                    <a href="/Sumit_Yadav_Data_Scientist.docx" download className="text-accent" style={{ fontWeight: 700 }}>Sumit_Yadav_Data_Scientist.docx</a>
                 </div>
             </section>
         </div>

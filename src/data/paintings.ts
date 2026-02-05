@@ -1,16 +1,16 @@
 export const paintings = [
     {
         id: 1,
-        title: "Mountain Serenity",
-        description: "Oil on canvas. A peaceful landscape of the Himalayan range.",
+        title: "Bliss.",
+        description: "Digital Painting. Made on Ipad with Procreate",
         imageUrl: "/IMG_0207.JPG",
-        details: "Size: 24x36 inches, Year: 2023"
+        details: "A4, Year: 2025"
     },
     {
         id: 2,
-        title: "Urban Chaos",
-        description: "Acrylic. A vibrant depiction of city life during rush hour.",
+        title: "Focused.",
+        description: "Digital Painting. Made on Ipad with Procreate",
         imageUrl: "/IMG_0128.jpg",
-        details: "Size: 30x40 inches, Year: 2022"
+        details: "A4, Year: 2025"
     },
 ];
