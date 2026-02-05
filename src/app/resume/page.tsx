@@ -25,7 +25,11 @@ export default function ResumePage() {
                                 <span className="text-muted" style={{ fontWeight: 600 }}>{exp.period}</span>
                                 <h3 style={{ margin: 0, color: 'var(--text)' }}>{exp.role}</h3>
                                 <p style={{ fontWeight: 700, color: 'var(--accent-alt)', fontSize: '0.9rem', marginBottom: '0.25rem' }}>{exp.company}</p>
-                                <p className="text-muted" style={{ marginTop: '0', maxWidth: '600px' }}>{exp.description}</p>
+                                <ul className="text-muted" style={{ marginTop: '0', maxWidth: '600px', listStyleType: 'disc', paddingLeft: '1.2rem' }}>
+                                    {exp.description.map((point: string, pIndex: number) => (
+                                        <li key={pIndex} style={{ marginBottom: '0.5rem' }}>{point}</li>
+                                    ))}
+                                </ul>
                             </div>
                         </div>
                     ))}
