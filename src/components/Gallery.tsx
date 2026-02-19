@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 import { paintings } from '@/data/paintings';
 import styles from './Gallery.module.css';
@@ -11,7 +12,7 @@ export default function Gallery() {
         <>
             <div className="container animate-fade">
                 <section className="section">
-                    <h1 style={{ marginBottom: '4rem' }}>Art Showcase</h1>
+                    <h1 className="text-center mb-4">Art Showcase</h1>
                     <div className={styles.grid}>
                         {paintings.map((painting) => (
                             <div
@@ -20,7 +21,14 @@ export default function Gallery() {
                                 onClick={() => setSelectedItem(painting)}
                             >
                                 <div className={styles.imageWrapper}>
-                                    <img src={painting.imageUrl} alt={painting.title} className={styles.paintingImage} />
+                                    <Image
+                                        src={painting.imageUrl}
+                                        alt={painting.title}
+                                        fill
+                                        sizes="(max-width: 640px) 100vw, 280px"
+                                        className={styles.paintingImage}
+                                        suppressHydrationWarning
+                                    />
                                 </div>
                                 <div className={styles.info}>
                                     <h3 className={styles.paintingTitle}>{painting.title}</h3>
@@ -35,13 +43,20 @@ export default function Gallery() {
             {selectedItem && (
                 <div className={styles.lightbox} onClick={() => setSelectedItem(null)}>
                     <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
-                        <button className={styles.closeBtn} onClick={() => setSelectedItem(null)}>close [x]</button>
+                        <button className={styles.closeBtn} onClick={() => setSelectedItem(null)} aria-label="Close">
+                            ✕
+                        </button>
                         <div className={styles.lightboxImageWrapper}>
-                            <img src={selectedItem.imageUrl} alt={selectedItem.title} className={styles.lightboxImage} />
+                            {/* Using standard img here to allow natural sizing "hugging" which is difficult with next/image without known dimensions */}
+                            <img
+                                src={selectedItem.imageUrl}
+                                alt={selectedItem.title}
+                                className={styles.lightboxImage}
+                            />
                         </div>
                         <div className={styles.lightboxDetails}>
-                            <h2 className="text-accent">{selectedItem.title}</h2>
-                            <p>{selectedItem.description}</p>
+                            <h2 className="text-accent" style={{ margin: 0 }}>{selectedItem.title}</h2>
+                            <p style={{ margin: 0 }}>{selectedItem.description}</p>
                             <p className={styles.details}>{selectedItem.details}</p>
                         </div>
                     </div>

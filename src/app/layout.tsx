@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   title: "Not An Orca.",
   description: "Personal portfolio featuring projects, articles, resume, and paintings.",
   icons: {
-    icon: '/icon.png',
-    shortcut: '/favicon.ico',
-    apple: '/icon.png',
+    icon: '/icons/icon.png',
+    shortcut: '/icons/favicon.ico',
+    apple: '/icons/icon.png',
   },
 };
 

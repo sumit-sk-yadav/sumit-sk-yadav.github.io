@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import ThemeSwitcher from './ThemeSwitcher';
 import styles from './Navbar.module.css';
 
@@ -7,11 +8,18 @@ export default function Navbar() {
         <nav className={styles.navbar}>
             <div className={styles.container}>
                 <Link href="/" className={styles.logo}>
-                    <img src="/icon.png" alt="Logo" className={styles.logoIcon} />
+                    <Image
+                        src="/icons/icon.png"
+                        alt="Not An Orca Logo"
+                        width={32}
+                        height={32}
+                        className={styles.logoIcon}
+                        suppressHydrationWarning
+                    />
                     Not An Orca.
                 </Link>
                 <div className={styles.navActions}>
-                    <ul className={styles.navLinks}>
+                    <ul className={styles.navLinks} aria-label="Main Navigation">
                         <li><Link href="/">About</Link></li>
                         <li className={styles.separator}>|</li>
                         <li><Link href="/projects">Projects</Link></li>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { skillGroups } from '@/data/skills';
 import styles from './page.module.css';
 
@@ -6,7 +7,15 @@ export default function Home() {
     <div className="container animate-fade">
       <section className={styles.hero}>
         <div className={styles.profilePicContainer}>
-          <img src="/main_picture.png" alt="Sumit Yadav" className={styles.profilePic} />
+          <Image
+            src="/images/profile/main_picture.png"
+            alt="Sumit Yadav - Profile"
+            width={200}
+            height={200}
+            className={styles.profilePic}
+            priority
+            suppressHydrationWarning
+          />
         </div>
         <h1 className={styles.title}>
           Sumit Yadav
@@ -17,10 +26,6 @@ export default function Home() {
             a <span className="text-accent">Marine Ecologist</span> by academic training,
             and an <span className="text-accent">Artist</span> when inspiration strikes.
           </p>
-          {/* <p>
-            I build digital experiences that focus on <span className="text-accent">functionality</span>
-            and <span className="text-accent">technical excellence</span>.
-          </p> */}
         </div>
       </section>
 

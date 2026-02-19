@@ -1,33 +1,24 @@
 import { experience } from '@/data/experience';
+import styles from './resume.module.css';
 
 export default function ResumePage() {
     return (
         <div className="container animate-fade">
             <section className="section">
-                <h1 style={{ marginBottom: '2.5rem' }}>Experience & Education</h1>
+                <h1 className={styles.title}>Experience & Education</h1>
 
-                <div style={{ position: 'relative', borderLeft: '2px solid var(--border)', marginLeft: '0.5rem', paddingLeft: '2.5rem' }}>
+                <div className={styles.timeline}>
                     {experience.map((exp, index) => (
-                        <div key={index} style={{ marginBottom: '2.5rem', position: 'relative' }}>
-                            <div style={{
-                                position: 'absolute',
-                                left: '-2.5rem',
-                                top: '0.5rem',
-                                width: '12px',
-                                height: '12px',
-                                borderRadius: '50%',
-                                background: 'var(--accent)',
-                                transform: 'translateX(-50%)',
-                                border: '4px solid var(--bg)'
-                            }} />
+                        <div key={index} className={styles.timelineItem}>
+                            <div className={styles.timelineDot} />
 
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                <span className="text-muted" style={{ fontWeight: 600 }}>{exp.period}</span>
-                                <h3 style={{ margin: 0, color: 'var(--text)' }}>{exp.role}</h3>
-                                <p style={{ fontWeight: 700, color: 'var(--accent-alt)', fontSize: '0.9rem', marginBottom: '0.25rem' }}>{exp.company}</p>
-                                <ul className="text-muted" style={{ marginTop: '0', maxWidth: '600px', listStyleType: 'disc', paddingLeft: '1.2rem' }}>
+                            <div className={styles.timelineContent}>
+                                <span className={`text-muted ${styles.period}`}>{exp.period}</span>
+                                <h3 className={styles.role}>{exp.role}</h3>
+                                <p className={styles.company}>{exp.company}</p>
+                                <ul className={`text-muted ${styles.description}`}>
                                     {exp.description.map((point: string, pIndex: number) => (
-                                        <li key={pIndex} style={{ marginBottom: '0.5rem' }}>{point}</li>
+                                        <li key={pIndex} className={styles.descriptionItem}>{point}</li>
                                     ))}
                                 </ul>
                             </div>
@@ -35,9 +26,9 @@ export default function ResumePage() {
                     ))}
                 </div>
 
-                <div style={{ marginTop: '2.5rem', padding: '2rem', border: '1px dashed var(--border)', textAlign: 'center' }}>
-                    <p style={{ marginBottom: '1.5rem' }}>Download (.docx)</p>
-                    <a href="/Sumit_Yadav_Data_Scientist.docx" download className="text-accent" style={{ fontWeight: 700 }}>Sumit_Yadav_Data_Scientist.docx</a>
+                <div className={styles.downloadSection}>
+                    <p className={styles.downloadText}>Download (.docx)</p>
+                    <a href="/docs/Sumit_Yadav_Data_Scientist.docx" download className={`text-accent ${styles.downloadLink}`}>Sumit_Yadav_Data_Scientist.docx</a>
                 </div>
             </section>
         </div>

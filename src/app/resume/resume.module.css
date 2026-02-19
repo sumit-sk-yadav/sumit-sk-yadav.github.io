@@ -1,0 +1,75 @@
+.title {
+    margin-bottom: 2.5rem;
+}
+
+.timeline {
+    position: relative;
+    border-left: 2px solid var(--border);
+    margin-left: 0.5rem;
+    padding-left: 2.5rem;
+}
+
+.timelineItem {
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.timelineDot {
+    position: absolute;
+    left: -2.5rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    transform: translateX(-50%);
+    border: 4px solid var(--bg);
+}
+
+.timelineContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.period {
+    font-weight: 600;
+}
+
+.role {
+    margin: 0;
+    color: var(--text);
+}
+
+.company {
+    font-weight: 700;
+    color: var(--accent-alt);
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.description {
+    margin-top: 0;
+    max-width: 600px;
+    list-style-type: disc;
+    padding-left: 1.2rem;
+}
+
+.descriptionItem {
+    margin-bottom: 0.5rem;
+}
+
+.downloadSection {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    border: 1px dashed var(--border);
+    text-align: center;
+}
+
+.downloadText {
+    margin-bottom: 1.5rem;
+}
+
+.downloadLink {
+    font-weight: 700;
+}

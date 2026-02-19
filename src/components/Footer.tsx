@@ -1,8 +1,10 @@
+import styles from './Footer.module.css';
+
 export default function Footer() {
     return (
-        <footer style={{ padding: '4rem 0', textAlign: 'center', color: 'var(--text-secondary)' }}>
+        <footer className={styles.footer}>
             <div className="container">
-                <p>&copy; {new Date().getFullYear()} Sumit SurenderKumar Yadav.</p>
+                <p suppressHydrationWarning>&copy; {new Date().getFullYear()} Sumit SurenderKumar Yadav.</p>
             </div>
         </footer>
     );
