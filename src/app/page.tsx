@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import { skillGroups } from '@/data/skills';
+import { socials } from '@/data/socials';
+import SocialCard from '@/components/SocialCard';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -43,6 +45,15 @@ export default function Home() {
                 ))}
               </div>
             </div>
+          ))}
+        </div>
+      </section>
+
+      <section className={`section ${styles.socialsSection}`}>
+        <h2 className={styles.sectionTitle}>Connect</h2>
+        <div className={styles.socialsContainer}>
+          {socials.map((social) => (
+            <SocialCard key={social.id} platform={social.platform} link={social.link} />
           ))}
         </div>
       </section>

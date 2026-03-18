@@ -1,0 +1,37 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    text-decoration: none; /* Override global link hover */
+}
+
+.platform {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.card:hover .platform {
+    color: var(--accent);
+}
+
+.icon {
+    color: var(--muted);
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+}
+
+.card:hover .icon {
+    color: var(--accent);
+    transform: translate(2px, -2px);
+}

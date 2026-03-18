@@ -95,6 +95,16 @@
   font-weight: 400;
 }
 
+.socialsSection {
+  padding-top: 2rem;
+}
+
+.socialsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
 @media (max-width: 640px) {
   .title {
     font-size: 2.2rem;
@@ -102,5 +112,9 @@
 
   .skillsList {
     gap: 1rem;
+  }
+
+  .socialsContainer {
+    grid-template-columns: 1fr;
   }
 }
